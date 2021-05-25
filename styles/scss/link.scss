@@ -10,6 +10,58 @@ html {
   font-size: 62.5%; // 1rem = 10px
 }
 
+//////////// Base Styles ////////////
+img {
+  display: block;
+  width: 100%;
+}
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+////////// Section Search ///////////
+.section-search {
+  background-color: #f1fafb;
+  padding: 2rem;
+
+  &__heading-container {
+    margin-bottom: 4rem;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+  }
+
+  &__input-field {
+    &--name {
+      grid-column: 1 / -1;
+    }
+    &--location {
+      grid-column: 1 / -1;
+    }
+  }
+  &__input {
+    padding: 0.85rem 2rem;
+    font-size: 1.4rem;
+    line-height: 1.68rem;
+    font-weight: 700;
+    color: #b6b4b5;
+    text-align: center;
+    box-shadow: 0px 0px 1rem rgba(37, 82, 172, 0.1);
+    border-radius: 1rem;
+    &:focus::placeholder {
+      color: transparent;
+    }
+    &::placeholder {
+      text-align: center;
+    }
+  }
+}
+
 ////////// Section Cards   //////////
 .section-cards {
   background-color: #f1fafb;
@@ -102,21 +154,32 @@ html {
 .btn {
   cursor: pointer;
   border: none;
-}
-
-.btn-secondary {
-  font-size: 1.8rem;
-  font-weight: 700;
-  line-height: 2.16rem;
-  color: #b6b4b5;
-  background-color: #fff;
   width: 100%;
-  padding: 1.4rem 2rem;
+  font-weight: 700;
   box-shadow: 0px 0px 10px rgba(37, 82, 172, 0.1);
   border-radius: 1rem;
 }
 
+.btn-primary {
+  color: #fff;
+  background-color: #2552ac;
+  padding: 0.85rem 2rem;
+}
+
+.btn-secondary {
+  font-size: 1.8rem;
+  line-height: 2.16rem;
+  color: #b6b4b5;
+  background-color: #fff;
+  padding: 1.4rem 2rem;
+}
+
 ////////// Headings //////////////
+.heading-secondary {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.621rem;
+}
 
 .heading-tertiary {
   font-size: 1.8rem;

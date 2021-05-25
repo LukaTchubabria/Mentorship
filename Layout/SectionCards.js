@@ -4,7 +4,7 @@ import Button from "../components/Button";
 
 const SectionCards = () => {
   const mockArray = [1, 2, 3, 4];
-  const renderCards = mockArray.map((card) => {
+  const renderCards = mockArray.map((card, index) => {
     return (
       <Card
         courseImgSrc="/img/course-image.png"
@@ -24,6 +24,7 @@ const SectionCards = () => {
         mentorImgWidth="81"
         mentorImgAlt="Mentor Image"
         mentorImgClassName="mentor-img"
+        key={index}
       />
     );
   });

@@ -1,0 +1,79 @@
+@mixin flex($justify: center, $align: center, $direct: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direct;
+  }
+  @mixin flexh($justify: center, $align: start, $direct: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direct;
+  }
+  @mixin flexv($justify: start, $align: center, $direct: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direct;
+  }
+  @mixin flexc($justify: center, $align: center, $direct: column) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direct;
+  }
+  
+  @mixin input {
+    
+    margin-bottom: 10px;
+    background-color: #ebebeb;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    text-indent: 10px;
+    width: 80%;
+  
+  }
+  
+  @mixin bg($size: cover, $position: center, $repeat: no-repeat) { 
+    background-size: $size;
+    background-position: $position;
+    background-repeat: $repeat;
+  
+  }
+  
+  @mixin btn($w:100%, $h:100%, $s:12px) {
+    width: $w;
+    height: $h;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: $gradient_1;
+    @include font($s, r-bold, $white_1)
+  }
+  
+  @mixin font($s, $f, $c) {
+    font-size: $s;
+    font-family: $f;
+    color: $c;
+  }
+  
+  
+  
+  @mixin p($over:hidden, $W, $maxh:70%, $wbreak:break-all,) { 
+    
+    overflow: $over; 
+    width: $W;
+    max-height: $maxh;
+    word-break: $wbreak;
+  }
+
+
+  @mixin bgimg($w:100%,$h:100%,$o-fit:cover) { 
+  
+    width: $w;
+    height: $h;
+    object-fit: $o-fit;
+  }

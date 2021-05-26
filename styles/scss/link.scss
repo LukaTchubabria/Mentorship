@@ -58,6 +58,7 @@ input {
     }
     &::placeholder {
       text-align: center;
+      color: #b6b4b5;
     }
   }
 }
@@ -120,6 +121,9 @@ input {
   }
   &__img-container {
     margin-bottom: 1rem;
+    & > div {
+      width: 100%;
+    }
   }
   &__course-info {
     display: flex;

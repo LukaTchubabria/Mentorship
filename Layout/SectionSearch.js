@@ -20,9 +20,8 @@ const SectionSearch = () => {
     setCoursePrice(e.target.value);
   };
 
-  console.log(courseName, courseLocation, coursePrice);
   return (
-    <section className="section-search">
+    <section className="section-search" id="search">
       <div className="section-search__heading-container">
         <Heading
           headingTag="h2"

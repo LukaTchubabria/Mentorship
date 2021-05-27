@@ -1,0 +1,21 @@
+.header {
+    background-color: #FEFEFE;
+    padding: 1.1rem 3.4rem 1.3rem 3.4rem;
+    @include flex($justify: space-between, $direct: row-reverse);
+
+
+    &__social-media {
+        display: flex;
+
+        &>:nth-child(1){
+            margin-right: 2rem;
+        }
+    }
+    &__icon-container {
+        width: 5rem;
+        height: 5rem;
+        background-color: #f1fafb;
+        @include flex;
+        border-radius: 1rem;
+    }
+}

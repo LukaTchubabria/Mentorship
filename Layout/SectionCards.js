@@ -1,29 +1,46 @@
 import Heading from "../components/Heading";
 import Card from "../components/Card";
 import Button from "../components/Button";
+import { courseData } from "../data/courseData";
+import { useState } from "react";
 
 const SectionCards = () => {
-  const mockArray = [1, 2, 3, 4];
-  const renderCards = mockArray.map((card, index) => {
+  const [isCardClicked, setIsCardClicked] = useState(false);
+
+  const handleCardClick = () => {
+    setIsCardClicked(!isCardClicked);
+  };
+
+  const renderCards = courseData.map((card, index) => {
     return (
       <Card
-        courseImgSrc="/img/course-image.png"
-        courseImgHeight="211"
-        courseImgWidth="282"
-        courseImgAlt="Course Image"
-        courseImgClassName="course-img"
-        headingTag="h4"
-        headingClassName="heading-quaternary"
-        headingText="კურსის სახელი"
-        mentorParagraphClassName="course-name"
-        mentorParagraphText="მენტორი"
-        priceParagraphClassName="course-price"
-        priceParagraphText="100 ₾"
-        mentorImgSrc="/img/mentor.jpg"
-        mentorImgHeight="80"
-        mentorImgWidth="81"
-        mentorImgAlt="Mentor Image"
-        mentorImgClassName="mentor-img"
+        courseImgSrc={card.courseImgSrc}
+        courseImgHeight={card.courseImgHeight}
+        courseImgWidth={card.courseImgWidth}
+        courseImgAlt={card.courseImgAlt}
+        courseImgClassName={card.courseImgClassName}
+        headingTag={card.headingTag}
+        headingClassName={card.headingClassName}
+        headingText={card.headingText}
+        secondaryHeadingTag={card.secondaryHeadingTag}
+        secondaryHeadingClassName={card.secondaryHeadingClassName}
+        secondaryHeadingText={card.secondaryHeadingText}
+        tertiaryHeadingTag={card.tertiaryHeadingTag}
+        tertiaryHeadingClassName={card.tertiaryHeadingClassName}
+        tertiaryHeadingText={card.tertiaryHeadingText}
+        mentorParagraphClassName={card.mentorParagraphClassName}
+        mentorParagraphText={card.mentorParagraphText}
+        priceParagraphClassName={card.priceParagraphClassName}
+        priceParagraphText={card.priceParagraphText}
+        mentorImgSrc={card.mentorImgSrc}
+        mentorImgHeight={card.mentorImgHeight}
+        mentorImgWidth={card.mentorImgWidth}
+        mentorImgAlt={card.mentorImgAlt}
+        mentorImgClassName={card.mentorImgClassName}
+        meetingQuantity={card.meetingQuantity}
+        courseInfoText={card.courseInfoText}
+        onClick={handleCardClick}
+        isCardClicked={isCardClicked}
         key={index}
       />
     );

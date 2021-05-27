@@ -6,14 +6,19 @@ const SectionChoice = () => {
   return (
     <section className="section-choice">
         <div className="section-choice__heading-container">
-        <Heading
+          <Heading
             headingTag="h2"
             className="heading-secondary"
-            text="აირჩიე სასურველი გაკვეთილები და გაუზიარე ცოდნა"/>
+            text="აირჩიე სასურველი გაკვეთილები და გაუზიარე ცოდნა"
+          />
         </div>
-        <div className="section-search__input-field section-search__input-field--button">
-            <Button text="მინდა ვისწავლო" className="btn-primary" />
-            <Button text="ძიებამინდა ვისწავლო" className="btn-primary" />
+        <div className="section-choice__btn-cont">
+          <Button text="მინდა ვისწავლო" 
+            className="btn-learn" 
+          />
+          <Button text="ძიებამინდა ვისწავლო" 
+            className="btn-teach" 
+          />
         </div>
     </section>
   );

@@ -1,0 +1,19 @@
+.section-choice {
+    padding: 5rem 3.4rem 10rem 3.4rem;
+
+    &__heading-container {
+        width: 100%;
+    }
+    &__btn-cont {
+        margin-top: 2.9rem;
+        text-align: center;
+
+        .btn-learn {
+            @include btn(16.4rem,  3.4rem, white, 14px, Helvetica Neue LT GEO, $blue-cyan)
+        }
+        .btn-teach {
+            margin-top: 2rem;
+            @include btn(16.4rem,  3.4rem, rgba(255, 255, 255, 0.94), 14px, Helvetica Neue LT GEO, $grey-dark)
+        }
+    }
+}

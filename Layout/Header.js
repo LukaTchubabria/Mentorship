@@ -22,6 +22,12 @@ const Header = () => {
     setIsUserClicked(!isUserClicked);
   };
 
+  const handlePopupBoxClose = (e) => {
+    if (e.target.classList == "registration-popup") {
+      setIsUserClicked(false);
+    }
+  };
+
   const renderPopup = isUserClicked ? (
     <RegistrationPopup
       user={true}
@@ -31,6 +37,7 @@ const Header = () => {
       onUserNameChange={handleUserNameChange}
       onPasswordChange={handlePasswordChange}
       onEmailChange={handleEmailChange}
+      onClick={handlePopupBoxClose}
     />
   ) : null;
   return (

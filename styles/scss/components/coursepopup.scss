@@ -1,0 +1,10 @@
+.course-popup {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 40%);
+  background-color: $white-cont;
+  padding: 3rem;
+  width: 80%;
+  border-radius: 10px;
+}

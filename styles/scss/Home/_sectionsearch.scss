@@ -1,0 +1,39 @@
+.section-search {
+  padding: 2rem;
+
+  &__heading-container {
+    margin-bottom: 4rem;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+  }
+
+  &__input-field {
+    &--name {
+      grid-column: 1 / -1;
+    }
+    &--location {
+      grid-column: 1 / -1;
+    }
+  }
+  &__input {
+    padding: 0.85rem 2rem;
+    font-size: 1.4rem;
+    line-height: 1.68rem;
+    font-weight: 700;
+    color: $grey-dark;
+    text-align: center;
+    box-shadow: $shadow_1;
+    border-radius: 1rem;
+    &:focus::placeholder {
+      color: transparent;
+    }
+    &::placeholder {
+      text-align: center;
+      color: $grey-dark;
+    }
+  }
+}

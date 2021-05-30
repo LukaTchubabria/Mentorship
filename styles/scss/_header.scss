@@ -1,6 +1,8 @@
 .header {
   background-color: $white-cont;
   padding: 1.1rem 3.4rem 1.3rem 3.4rem;
+  position: fixed;
+  width: 100%;
   @include flex($justify: space-between, $direct: row-reverse);
 
   &__social-media {

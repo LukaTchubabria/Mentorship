@@ -1,23 +1,55 @@
 import Heading from "./Heading";
 import Paragraph from "./Paragraph";
 import Image from "next/image";
-import CoursePopup from "./CoursePopup";
 
 const Card = (props) => {
-  // const renderCoursePopup = props.isCardClicked ? (
-  //   <CoursePopup
-  //     headingTag={props.headingTag}
-  //     headingText={props.headingText}
-  //     headingClassName={props.headingClassName}
-  //     secondaryHeadingTag={props.secondaryHeadingTag}
-  //     secondaryHeadingClassName={props.secondaryHeadingClassName}
-  //     secondaryHeadingText={props.secondaryHeadingText}
-  //   />
-  // ) : null;
+  const handleCardClick = () => {
+    props.setIsCardClicked(!props.isCardClicked);
+    const {
+      headingText,
+      headingTag,
+      headingClassName,
+      aboutCourseHeadingTag,
+      aboutCourseHeadingText,
+      aboutCourseHeadingClassName,
+      courseInfoText,
+      courseLearnWhatText,
+      courseLearnWhatHeadingText,
+      meetingText,
+      meetingClassName,
+      priceClassName,
+      priceText,
+      mentorImgSrc,
+      mentorImgHeight,
+      mentorImgWidth,
+      mentorImgAlt,
+      mentorImgClassName,
+    } = props;
+    props.setPopupData((prevState) => ({
+      ...prevState,
+      headingText,
+      headingTag,
+      headingClassName,
+      aboutCourseHeadingTag,
+      aboutCourseHeadingText,
+      aboutCourseHeadingClassName,
+      courseInfoText,
+      courseLearnWhatText,
+      courseLearnWhatHeadingText,
+      meetingText,
+      meetingClassName,
+      priceClassName,
+      priceText,
+      mentorImgSrc,
+      mentorImgHeight,
+      mentorImgWidth,
+      mentorImgAlt,
+      mentorImgClassName,
+    }));
+  };
   return (
     <div className={`card`}>
-      {/* {renderCoursePopup} */}
-      <a onClick={props.onClick}>
+      <a onClick={handleCardClick}>
         <div className="card__img-container">
           <Image
             src={props.courseImgSrc}

@@ -1,20 +1,24 @@
+@import "./utilities/var.scss";
+@import "./utilities/mixins.scss";
 
+/* Reset */
+@import "./reset.scss";
 
-//////////// Base Styles ////////////
-img {
-  display: block;
-  width: 100%;
-}
-input {
-  width: 100%;
-  border: none;
-  outline: none;
-}
+/* Global */
+@import "./global.scss";
 
-////////// Components /////////
+/* Components */
+@import "./components/btn.scss";
+@import "./components/card.scss";
+@import "./components/heading.scss";
+@import "./components/registrationpopup.scss";
+@import "./components//coursepopup.scss";
 
+/* Content style */
+@import "./_header";
+@import "./_footer";
 
-
-
-
-
+/* HOME */
+@import "./Home/_sectioncards";
+@import "./Home/_sectionchoice";
+@import "./Home/_sectionsearch";

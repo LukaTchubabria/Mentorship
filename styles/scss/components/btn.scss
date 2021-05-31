@@ -1,24 +1,22 @@
-////////// Buttons //////////////
-
 .btn {
-    cursor: pointer;
-    border: none;
-    width: 100%;
-    font-weight: 700;
-    box-shadow: 0px 0px 10px rgba(37, 82, 172, 0.1);
-    border-radius: 1rem;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  font-weight: 700;
+  box-shadow: $shadow_1;
+  border-radius: 1rem;
 }
-  
+
 .btn-primary {
-    color: #fff;
-    background-color: #2552ac;
-    padding: 0.85rem 2rem;
+  color: $white-cont;
+  background-color: $blue-dark;
+  padding: 0.85rem 2rem;
 }
-  
+
 .btn-secondary {
-    font-size: 1.8rem;
-    line-height: 2.16rem;
-    color: #b6b4b5;
-    background-color: #fff;
-    padding: 1.4rem 2rem;
+  font-size: 1.8rem;
+  line-height: 2.16rem;
+  color: $grey-dark;
+  background-color: $white-cont;
+  padding: 1.4rem 2rem;
 }

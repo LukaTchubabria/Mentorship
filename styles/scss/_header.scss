@@ -1,21 +1,22 @@
 .header {
-    background-color: #FEFEFE;
-    padding: 1.1rem 3.4rem 1.3rem 3.4rem;
-    @include flex($justify: space-between, $direct: row-reverse);
+  background-color: $white-cont;
+  padding: 1.1rem 3.4rem 1.3rem 3.4rem;
+  position: fixed;
+  width: 100%;
+  @include flex($justify: space-between, $direct: row-reverse);
 
+  &__social-media {
+    display: flex;
 
-    &__social-media {
-        display: flex;
-
-        &>:nth-child(1){
-            margin-right: 2rem;
-        }
+    & > :nth-child(1) {
+      margin-right: 2rem;
     }
-    &__icon-container {
-        width: 5rem;
-        height: 5rem;
-        background-color: #f1fafb;
-        @include flex;
-        border-radius: 1rem;
-    }
+  }
+  &__icon-container {
+    width: 5rem;
+    height: 5rem;
+    background-color: $bg;
+    @include flex;
+    border-radius: 1rem;
+  }
 }

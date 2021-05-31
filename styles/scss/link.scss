@@ -1,23 +1,24 @@
-@import './utilities/var.scss';
-@import './utilities/mixins.scss';
+@import "./utilities/var.scss";
+@import "./utilities/mixins.scss";
 
 /* Reset */
-@import './reset.scss';
+@import "./reset.scss";
 
 /* Global */
-@import './global.scss';
+@import "./global.scss";
 
 /* Components */
-@import './components/btn.scss';
-@import './components/card.scss';
-@import './components/heading.scss';
+@import "./components/btn.scss";
+@import "./components/card.scss";
+@import "./components/heading.scss";
+@import "./components/registrationpopup.scss";
+@import "./components//coursepopup.scss";
 
 /* Content style */
-@import './_header';
-@import './_footer';
-
+@import "./_header";
+@import "./_footer";
 
 /* HOME */
-@import './Home/_sectioncards';
-@import './Home/_sectionchoice';
-@import './Home/_sectionsearch';
+@import "./Home/_sectioncards";
+@import "./Home/_sectionchoice";
+@import "./Home/_sectionsearch";

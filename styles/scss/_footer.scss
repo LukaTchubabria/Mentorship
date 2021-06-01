@@ -6,10 +6,7 @@
   background-color: $white-cont;
 
   &__copyright-text {
-    color: $grey-dark;
-    font-weight: 300;
-    font-size: 1.8rem;
-    line-height: 1.8rem;
+    @include font(18px, 'h-l', $grey-dark);
   }
 
   &__social-media {

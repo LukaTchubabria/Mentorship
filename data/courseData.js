@@ -8,7 +8,7 @@ export const courseData = [
     headingTag: "h4",
     headingClassName: "heading-quaternary",
     headingText: "კურსის სახელი",
-    mentorParagraphClassName: "course-name",
+    mentorParagraphClassName: "mentor-name",
     mentorParagraphText: "მენტორი",
     priceClassName: "course-price",
     priceText: "100 ₾",
@@ -22,10 +22,12 @@ export const courseData = [
     aboutCourseHeadingClassName: "heading-quinary",
     courseInfoTextLess:
       "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
-    courseInfoTextMore: "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
+    courseInfoTextMore:
+      "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
     courseLearnWhatTextLess:
       "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
-    courseLearnWhatTextMore:"ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ" ,
+    courseLearnWhatTextMore:
+      "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
     spanButton: "გაიგე მეტი",
     courseLearnWhatHeadingText: "რას ისწავლი?",
     meetingText: "18 შეხვედრა",
@@ -40,7 +42,7 @@ export const courseData = [
     headingTag: "h4",
     headingClassName: "heading-quaternary",
     headingText: "კურსის სახელი",
-    mentorParagraphClassName: "course-name",
+    mentorParagraphClassName: "mentor-name",
     mentorParagraphText: "მენტორი",
     priceClassName: "course-price",
     priceText: "100 ₾",
@@ -57,8 +59,10 @@ export const courseData = [
       "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
     courseLearnWhatTextLess:
       "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
-      courseInfoTextMore: "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
-      courseLearnWhatTextMore:"ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ" ,
+    courseInfoTextMore:
+      "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
+    courseLearnWhatTextMore:
+      "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
     courseLearnWhatHeadingText: "რას ისწავლი?",
     meetingText: "18 შეხვედრა",
     meetingClassName: "meeting",
@@ -72,7 +76,7 @@ export const courseData = [
     headingTag: "h4",
     headingClassName: "heading-quaternary",
     headingText: "კურსის სახელი",
-    mentorParagraphClassName: "course-name",
+    mentorParagraphClassName: "mentor-name",
     mentorParagraphText: "მენტორი",
     priceClassName: "course-price",
     priceText: "100 ₾",
@@ -87,10 +91,12 @@ export const courseData = [
     aboutCourseHeadingClassName: "heading-quinary",
     courseInfoTextLess:
       "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
-      courseInfoTextMore: "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
+    courseInfoTextMore:
+      "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
     courseLearnWhatTextLess:
       "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
-      courseLearnWhatTextMore:"ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ" ,
+    courseLearnWhatTextMore:
+      "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
     courseLearnWhatHeadingText: "რას ისწავლი?",
     meetingText: "18 შეხვედრა",
     meetingClassName: "meeting",
@@ -104,7 +110,7 @@ export const courseData = [
     headingTag: "h4",
     headingClassName: "heading-quaternary",
     headingText: "კურსის სახელი",
-    mentorParagraphClassName: "course-name",
+    mentorParagraphClassName: "mentor-name",
     mentorParagraphText: "მენტორი",
     priceClassName: "course-price",
     priceText: "100 ₾",
@@ -119,10 +125,12 @@ export const courseData = [
     aboutCourseHeadingClassName: "heading-quinary",
     courseInfoTextLess:
       "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
-      courseInfoTextMore: "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
+    courseInfoTextMore:
+      "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
     courseLearnWhatTextLess:
       "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
-      courseLearnWhatTextMore:"ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ" ,
+    courseLearnWhatTextMore:
+      "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
     courseLearnWhatHeadingText: "რას ისწავლი?",
     meetingText: "18 შეხვედრა",
     meetingClassName: "meeting",

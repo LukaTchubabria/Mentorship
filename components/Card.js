@@ -77,8 +77,8 @@ const Card = (props) => {
               text={props.mentorParagraphText}
             />
             <Paragraph
-              className={`card__${props.priceParagraphClassName}`}
-              text={props.priceParagraphText}
+              className={`card__${props.priceClassName}`}
+              text={props.priceText}
             />
           </div>
           <div className="card__mentor-img-container">

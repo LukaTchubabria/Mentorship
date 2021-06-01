@@ -3,6 +3,18 @@
 
   &__heading-container {
     margin-bottom: 2rem;
+
+    .heading-tertiary {
+      @include font(14px, 'h-b', $grey-light);
+    }
+  }
+
+  &__button-container {
+    .btn-seemore {
+      @include font(14px, 'h-b', $grey-dark);
+      background-color: $white-cont;
+      padding: 1.4rem 2rem;
+    }
   }
 
   &__cards-container {

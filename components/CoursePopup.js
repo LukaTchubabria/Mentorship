@@ -28,41 +28,45 @@ const CoursePopup = (props) => {
   return (
     <div className="course-popup" onClick={handleOnClick}>
       <div className="course-popup__box">
-        <Heading
+        <div className="course-popup__main-heading-container">
+          <Heading
           headingTag={props.headingTag}
           className={props.headingClassName}
           text={props.headingText}
         />
+        </div>
+        
         <div className="course-popup__info">
+          <div className="course-popup__secondary-heading-container">
           <Heading
             headingTag={props.aboutCourseHeadingTag}
             className={props.aboutCourseHeadingClassName}
             text={props.aboutCourseHeadingText}
           />
-          <p className="paragraph-popup">{props.courseInfoTextLess}<span className={`course-popup__span-button ${renderCourseInfoButtonClassName}`} onClick={handleCourseInfoClick}>&nbsp;{props.spanButton}</span> <span className={`course-popup__span-more-text ${renderCourseInfoSpanClassName}`}>{props.courseInfoTextMore}</span></p>
+          </div>
+          <p className="course-popup__paragraph">{props.courseInfoTextLess}<span className={`course-popup__span-button ${renderCourseInfoButtonClassName}`} onClick={handleCourseInfoClick}>{props.spanButton}</span> <span className={`course-popup__span-more-text ${renderCourseInfoSpanClassName}`}>{props.courseInfoTextMore}</span></p>
         </div>
         <div className="course-popup__info">
+        <div className="course-popup__secondary-heading-container">
           <Heading
             headingTag={props.aboutCourseHeadingTag}
             className={props.aboutCourseHeadingClassName}
             text={props.courseLearnWhatHeadingText}
           />
-          <p className="paragraph-popup">{props.courseLearnWhatTextLess}<span className={`course-popup__span-button ${renderCourseLearnWhatButtonClassName}`} onClick={handleCourseLearnWhatClick}>&nbsp;{props.spanButton}</span> <span className={`course-popup__span-more-text ${renderCourseLearnWhatSpanClassName}`}>{props.courseLearnWhatTextMore}</span></p>
-            
-            
-          
+          </div>
+          <p className="course-popup__paragraph">{props.courseLearnWhatTextLess}<span className={`course-popup__span-button ${renderCourseLearnWhatButtonClassName}`} onClick={handleCourseLearnWhatClick}>{props.spanButton}</span> <span className={`course-popup__span-more-text ${renderCourseLearnWhatSpanClassName}`}>{props.courseLearnWhatTextMore}</span></p>
         </div>
         <div className="course-popup__info">
-          <Paragraph className={props.priceClassName} text={props.priceText} />
+          <Paragraph className="course-popup__price" text={props.priceText} />
           <Paragraph
-            className={props.meetingClassName}
+            className="course-popup__meeting"
             text={props.meetingText}
           />
         </div>
         <div className="course-popup__button-registration-container">
           <Button className="btn-course-registration" text="რეგისტრაცია" />
         </div>
-        <div className="course-popup__img-container">
+        {/* <div className="course-popup__img-container">
           <Image
             src={props.mentorImgSrc}
             height={props.mentorImgHeight}
@@ -70,9 +74,9 @@ const CoursePopup = (props) => {
             alt={props.mentorImgAlt}
             className={props.mentorImgClassName}
           />
-        </div>
+        </div> */}
         <div className="course-popup__button-contact-container">
-          <Button className="btn-course-contact" text="კონტაქტი" />
+          <Button className="btn-course-contact" text="დაუკავშირდი მენტორს" />
         </div>
       </div>
     </div>

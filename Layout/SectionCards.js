@@ -28,8 +28,12 @@ const SectionCards = () => {
     aboutCourseHeadingTag: "h4",
     aboutCourseHeadingText: "",
     aboutCourseHeadingClassName: "",
-    courseInfoText: "",
-    courseLearnWhatText: "",
+    courseInfoTextLess: "",
+    courseInfoTextMore: "",
+    courseLearnWhatTextLess: "",
+    courseLearnWhatTextMore: "",
+    spanButton: ""
+    
   });
 
   const renderCards = courseData.map((card, index) => {
@@ -56,9 +60,12 @@ const SectionCards = () => {
         mentorImgAlt={card.mentorImgAlt}
         mentorImgClassName={card.mentorImgClassName}
         meetingQuantity={card.meetingQuantity}
-        courseInfoText={card.courseInfoText}
-        courseLearnWhatText={card.courseLearnWhatText}
+        courseInfoTextLess={card.courseInfoTextLess}
+        courseInfoTextMore={card.courseInfoTextMore}
+        courseLearnWhatTextLess={card.courseLearnWhatTextLess}
+        courseLearnWhatTextMore={card.courseLearnWhatTextMore}
         courseLearnWhatHeadingText={card.courseLearnWhatHeadingText}
+        spanButton={card.spanButton}
         meetingText={card.meetingText}
         meetingClassName={card.meetingClassName}
         isCardClicked={isCardClicked}
@@ -78,8 +85,11 @@ const SectionCards = () => {
       aboutCourseHeadingClassName={popupData.aboutCourseHeadingClassName}
       aboutCourseHeadingTag={popupData.aboutCourseHeadingTag}
       aboutCourseHeadingText={popupData.aboutCourseHeadingText}
-      courseInfoText={popupData.courseInfoText}
-      courseLearnWhatText={popupData.courseLearnWhatText}
+      courseInfoTextLess={popupData.courseInfoTextLess}
+      courseInfoTextMore={popupData.courseInfoTextMore}
+      courseLearnWhatTextLess={popupData.courseLearnWhatTextLess}
+      courseLearnWhatTextMore={popupData.courseLearnWhatTextMore}
+      spanButton={popupData.spanButton}
       courseLearnWhatHeadingText={popupData.courseLearnWhatHeadingText}
       priceClassName={popupData.priceClassName}
       priceText={popupData.priceText}

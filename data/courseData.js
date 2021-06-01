@@ -63,6 +63,7 @@ export const courseData = [
       "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
     courseLearnWhatTextMore:
       "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
+    spanButton: "გაიგე მეტი",
     courseLearnWhatHeadingText: "რას ისწავლი?",
     meetingText: "18 შეხვედრა",
     meetingClassName: "meeting",
@@ -97,6 +98,7 @@ export const courseData = [
       "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
     courseLearnWhatTextMore:
       "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
+    spanButton: "გაიგე მეტი",
     courseLearnWhatHeadingText: "რას ისწავლი?",
     meetingText: "18 შეხვედრა",
     meetingClassName: "meeting",
@@ -131,6 +133,7 @@ export const courseData = [
       "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
     courseLearnWhatTextMore:
       "ლორემ იფსუმ დოლორ სით ამეთ, სთეთ ფროფრიაე ცონცეფთამ ად ყუო, ეხ ფრო დიცათ ინსთრუცთიორ. ეთ თაციმათეს ელეცთრამ",
+    spanButton: "გაიგე მეტი",
     courseLearnWhatHeadingText: "რას ისწავლი?",
     meetingText: "18 შეხვედრა",
     meetingClassName: "meeting",

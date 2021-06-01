@@ -1,7 +1,7 @@
 .course-popup {
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   background-color: rgba(37, 82, 172, 0.33);
@@ -10,10 +10,54 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, 40%);
+    transform: translate(-50%, 100%);
     background-color: $white-cont;
     padding: 3rem;
     width: 80%;
     border-radius: 10px;
+    overflow: scroll;
+  }
+
+  &__main-heading-container {
+    text-align: center;
+    margin-bottom: 3.6rem;
+  }
+
+  &__info {
+    margin-bottom: 3.6rem;
+  }
+
+  &__paragraph {
+    font-size: 1.4rem;
+    line-height: 2.173rem;
+  }
+
+  &__secondary-heading-container {
+    margin-bottom: 1.5rem;
+  }
+
+  &__span-button {
+    display: block;
+    color: $blue-light;
+    font-size: 1.4rem;
+  }
+
+  &__span-more-text {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__price {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  &__meeting {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+  &__button-registration-container {
+    margin-bottom: 2rem;
   }
 }

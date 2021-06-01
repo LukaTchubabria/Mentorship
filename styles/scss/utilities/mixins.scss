@@ -60,6 +60,12 @@
   color: $c;
 }
 
+@mixin main-font($s, $f) {
+  font-size: $s;
+  font-family: $f;
+  color: $font-color;
+}
+
 
 
 @mixin p($over:hidden, $width:100%, $maxh:70%, $wbreak:break-all, ) {

@@ -104,7 +104,7 @@ const SectionCards = () => {
       </div>
       <div className="section-cards__cards-container">{renderCards}</div>
       <div className="section-cards__button-container">
-        <Button className="btn-secondary" text="ნახეთ მეტი" />
+        <Button className="btn-seemore" text="ნახეთ მეტი" />
       </div>
       {renderCoursePopup}
     </section>

@@ -27,18 +27,14 @@
     }
   }
 
-  &__course-name {
-    font-size: 1.4rem;
-    font-weight: 700;
+  &__mentor-name {
+    @include font(18px, 'h-m', #000);
     line-height: 1.8rem;
-    color: $grey-light;
   }
 
   &__course-price {
-    font-size: 3rem;
+    @include font(30px, 'h-m', $blue-light);
     line-height: 1.8rem;
-    font-weight: 500;
-    color: $blue-light;
   }
 
   &__mentor-img-container {

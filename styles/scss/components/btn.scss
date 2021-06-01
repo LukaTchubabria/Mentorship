@@ -17,3 +17,19 @@
   background-color: $white-cont;
   padding: 1.4rem 2rem;
 }
+
+.btn-course-registration,
+.btn-course-contact {
+  border-radius: 1rem;
+  padding: 1.4rem 2rem;
+}
+
+.btn-course-registration {
+  background-color: $blue-cyan;
+  color: #fff;
+  font-size: 1.7rem;
+}
+.btn-course-contact {
+  font-size: 1.2rem;
+  color: $blue-cyan;
+}

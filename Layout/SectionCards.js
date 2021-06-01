@@ -18,8 +18,8 @@ const SectionCards = () => {
     headingText: "",
     mentorParagraphClassName: "",
     mentorParagraphText: "",
-    pricehClassName: "",
-    pricehText: "",
+    priceClassName: "",
+    priceText: "",
     mentorImgSrc: "",
     mentorImgHeight: "",
     mentorImgWidth: "",
@@ -32,8 +32,7 @@ const SectionCards = () => {
     courseInfoTextMore: "",
     courseLearnWhatTextLess: "",
     courseLearnWhatTextMore: "",
-    spanButton: ""
-    
+    spanButton: "",
   });
 
   const renderCards = courseData.map((card, index) => {

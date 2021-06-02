@@ -24,7 +24,7 @@
   }
   &__input {
     padding: 0.85rem 2rem;
-    @include font(18px, 'h-b', $grey-dark);
+    @include font(18px, "h-b", $grey-dark);
     text-align: center;
     box-shadow: $shadow_1;
     border-radius: 1rem;

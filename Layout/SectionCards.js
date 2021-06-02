@@ -99,9 +99,11 @@ const SectionCards = () => {
       mentorImgWidth={popupData.mentorImgWidth}
       mentorImgAlt={popupData.mentorImgAlt}
       mentorImgClassName={popupData.mentorImgClassName}
+      isCardClicked={isCardClicked}
       setIsCardClicked={setIsCardClicked}
     />
   ) : null;
+
   return (
     <section className="section-cards">
       <div className="section-cards__heading-container">

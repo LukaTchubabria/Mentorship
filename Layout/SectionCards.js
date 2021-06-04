@@ -3,9 +3,18 @@ import Card from "../components/Card";
 import Button from "../components/Button";
 import CoursePopup from "../components/CoursePopup";
 import { courseData } from "../data/courseData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useMediaQuery } from 'react-responsive'
 
 const SectionCards = () => {
+  const [cardNumber, setCardNumber] = useState(4);
+  const isMobile = useMediaQuery({
+    query: '(max-width: 500px)'
+  })
+  const isTablet = useMediaQuery({
+    query: '(min-device-width: 600px)'
+  })
+  
   const [isCardClicked, setIsCardClicked] = useState(false);
   const [popupData, setPopupData] = useState({
     courseImgSrc: "",
@@ -35,7 +44,28 @@ const SectionCards = () => {
     spanButton: "",
   });
 
-  const renderCards = courseData.map((card, index) => {
+ 
+   useEffect(() => {
+     if (isMobile) {
+       setCardNumber(4)
+     } else if (isTablet) {
+      setCardNumber(8)
+     }
+
+      
+     
+     
+   },)
+ 
+
+  const handleCourseDataSplice = (itemCount) => {
+    const courseDataSplicedArr = courseData.slice(0, itemCount);
+    return courseDataSplicedArr;
+  }
+
+  
+
+  const renderCards = handleCourseDataSplice(cardNumber).map((card, index) => {
     return (
       <Card
         courseImgSrc={card.courseImgSrc}

@@ -4,17 +4,17 @@ import Button from "../components/Button";
 import CoursePopup from "../components/CoursePopup";
 import { courseData } from "../data/courseData";
 import { useEffect, useState } from "react";
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from "react-responsive";
 
 const SectionCards = () => {
   const [cardNumber, setCardNumber] = useState(4);
   const isMobile = useMediaQuery({
-    query: '(max-width: 500px)'
-  })
+    query: "(max-width: 599px)",
+  });
   const isTablet = useMediaQuery({
-    query: '(min-device-width: 600px)'
-  })
-  
+    query: "(min-device-width: 600px)",
+  });
+
   const [isCardClicked, setIsCardClicked] = useState(false);
   const [popupData, setPopupData] = useState({
     courseImgSrc: "",
@@ -44,26 +44,24 @@ const SectionCards = () => {
     spanButton: "",
   });
 
- 
-   useEffect(() => {
-     if (isMobile) {
-       setCardNumber(4)
-     } else if (isTablet) {
-      setCardNumber(8)
-     }
-
-      
-     
-     
-   },)
- 
+  useEffect(() => {
+    if (isMobile) {
+      setCardNumber(4);
+    }
+    if (isTablet) {
+      setCardNumber(8);
+    }
+  }, [isMobile, isTablet]);
 
   const handleCourseDataSplice = (itemCount) => {
     const courseDataSplicedArr = courseData.slice(0, itemCount);
     return courseDataSplicedArr;
-  }
+  };
 
-  
+  const handleOnClick = () => {
+    setCardNumber(cardNumber + 4);
+    console.log(cardNumber);
+  };
 
   const renderCards = handleCourseDataSplice(cardNumber).map((card, index) => {
     return (
@@ -145,7 +143,11 @@ const SectionCards = () => {
       </div>
       <div className="section-cards__cards-container">{renderCards}</div>
       <div className="section-cards__button-container">
-        <Button className="btn-seemore" text="ნახეთ მეტი" />
+        <Button
+          className="btn-seemore"
+          text="ნახეთ მეტი"
+          onClick={handleOnClick}
+        />
       </div>
       {renderCoursePopup}
     </section>

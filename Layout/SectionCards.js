@@ -14,6 +14,9 @@ const SectionCards = () => {
   const isTablet = useMediaQuery({
     query: "(min-device-width: 600px)",
   });
+  const isDesktop = useMediaQuery({
+    query: "(min-device-width: 1200px)",
+  });
 
   const [isCardClicked, setIsCardClicked] = useState(false);
   const [popupData, setPopupData] = useState({
@@ -49,9 +52,12 @@ const SectionCards = () => {
       setCardNumber(4);
     }
     if (isTablet) {
-      setCardNumber(8);
+      setCardNumber(6);
     }
-  }, [isMobile, isTablet]);
+    if (isDesktop) {
+      setCardNumber(16);
+    }
+  }, [isMobile, isTablet, isDesktop]);
 
   const handleCourseDataSplice = (itemCount) => {
     const courseDataSplicedArr = courseData.slice(0, itemCount);

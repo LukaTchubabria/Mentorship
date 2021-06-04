@@ -66,7 +66,6 @@ const SectionCards = () => {
 
   const handleOnClick = () => {
     setCardNumber(cardNumber + 4);
-    console.log(cardNumber);
   };
 
   const renderCards = handleCourseDataSplice(cardNumber).map((card, index) => {

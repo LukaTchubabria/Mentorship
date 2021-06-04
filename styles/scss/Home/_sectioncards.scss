@@ -5,13 +5,13 @@
     margin-bottom: 2rem;
 
     .heading-tertiary {
-      @include font(14px, 'h-b', $grey-light);
+      @include font(14px, "h-b", $grey-light);
     }
   }
 
   &__button-container {
     .btn-seemore {
-      @include font(14px, 'h-b', $grey-dark);
+      @include font(14px, "h-b", $grey-dark);
       background-color: $white-cont;
       padding: 1.4rem 2rem;
     }
@@ -19,5 +19,25 @@
 
   &__cards-container {
     margin-bottom: 3rem;
+    @media only screen and (min-width: 600px) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      row-gap: 3.5rem;
+      column-gap: 2.2rem;
+    }
+
+    & > * {
+      @media only screen and (min-width: 600px) {
+        flex-basis: 48%;
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+      @media only screen and (min-width: 1200px) {
+        flex-basis: 23%;
+        &
+      }
+    }
   }
 }

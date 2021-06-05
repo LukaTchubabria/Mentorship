@@ -1,11 +1,15 @@
 .section-search {
   padding: 2rem;
+  @media only screen and (min-width: 820px) {
+    padding-right: 5.1rem;
+    padding-left: 5.1rem;
+  }
 
   &__heading-container {
     margin-bottom: 4rem;
 
     .heading-secondary {
-      @include main-font(30px, 'h-b')
+      @include main-font(30px, "h-b");
     }
   }
 
@@ -13,20 +17,70 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.5rem;
+    justify-content: center;
+    @media only screen and (min-width: 820px) {
+      grid-template-columns: 3fr 2fr 1fr 2fr;
+      grid-gap: 2rem;
+    }
+    @media only screen and (min-width: 1200px) {
+      grid-template-columns: 4fr 3fr 2fr 1fr;
+      grid-gap: 0;
+      box-shadow: $shadow_1;
+      & input:not(.section-search__input-field--price) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      & input:not(.section-search__input-field--name) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
   }
 
   &__input-field {
     &--name {
       grid-column: 1 / -1;
+      @media only screen and (min-width: 820px) {
+        grid-column: 1 / 1;
+      }
+      @media only screen and (min-width: 1200px) {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 80%;
+          width: 1px;
+          background-color: rgba(216, 216, 216, 1);
+        }
+      }
     }
     &--location {
       grid-column: 1 / -1;
+      @media only screen and (min-width: 820px) {
+        grid-column: 2 / 2;
+      }
+      @media only screen and (min-width: 1200px) {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 80%;
+          width: 1px;
+          background-color: rgba(216, 216, 216, 1);
+        }
+      }
     }
   }
   &__input {
-    padding: 0.85rem 2rem;
+    padding: 0.85rem 1.4rem;
     line-height: 1.68rem;
-    @include font(14px, 'h-b', $font-color);
+    @include font(14px, "h-b", $font-color);
     text-align: center;
     box-shadow: $shadow_1;
     border-radius: 1rem;
@@ -35,7 +89,10 @@
     }
     &::placeholder {
       text-align: center;
-      @include font(14px, 'h-b', $grey-dark);
+      @include font(14px, "h-b", $grey-dark);
+    }
+    @media only screen and (min-width: 1200px) {
+      box-shadow: none;
     }
   }
 }

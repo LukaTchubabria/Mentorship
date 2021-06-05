@@ -4,9 +4,13 @@
   align-items: center;
   justify-content: space-between;
   background-color: $white-cont;
+  @media only screen and (min-width: 820px) {
+    padding-left: 5.1rem;
+    padding-right: 5.1rem;
+  }
 
   &__copyright-text {
-    @include font(18px, 'h-l', $grey-dark);
+    @include font(18px, "h-l", $grey-dark);
   }
 
   &__social-media {

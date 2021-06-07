@@ -8,14 +8,27 @@
   z-index: 9999;
   &__box {
     position: relative;
-    top: -700px;
+    top: -85vh;
     left: 50%;
     transform: translate(-50%, 100%);
     background-color: $white-cont;
     padding: 3rem;
     width: 80%;
+    height: 90vh;
     border-radius: 10px;
     overflow: scroll;
+
+    @media only screen and (min-width: 600px) {
+      display: flex;
+      justify-content: space-between;
+      padding: 4rem 5rem;
+    }
+  }
+
+  &__text-container {
+    @media only screen and (min-width: 600px) {
+      flex-basis: 40%;
+    }
   }
 
   &__main-heading-container {
@@ -28,12 +41,20 @@
   }
 
   &__paragraph {
-    font-size: 1.4rem;
-    line-height: 2.173rem;
+    @include font(1.4rem, h-l, #000); // This on review
+    line-height: 1.8rem;
   }
 
   &__secondary-heading-container {
     margin-bottom: 1.5rem;
+  }
+
+  &__mentor-container {
+    @media only screen and (min-width: 600px) {
+      & > *:first-child {
+        text-align: center;
+      }
+    }
   }
 
   &__span-button {
@@ -49,12 +70,14 @@
   }
 
   &__price {
-    font-size: 3rem;
+    @include font(3rem, h-b, #000);
     margin-bottom: 1rem;
+    @media only screen and (min-width: 600px) {
+      margin-bottom: 0.5rem;
+    }
   }
   &__meeting {
-    font-size: 2rem;
-    font-weight: 500;
+    @include font(1.4rem, h-m, #000);
     margin-bottom: 2rem;
   }
   &__button-registration-container {

@@ -35,6 +35,7 @@ const CoursePopup = (props) => {
   return (
     <div className="course-popup" onClick={handleOnClick}>
       <div className="course-popup__box">
+        <div className="course-popup__text-container">
         <div className="course-popup__main-heading-container">
           <Heading
             headingTag={props.headingTag}
@@ -89,6 +90,8 @@ const CoursePopup = (props) => {
             </span>
           </p>
         </div>
+        </div>
+        <div className="course-popup__mentor-container">
         <div className="course-popup__info">
           <Paragraph className="course-popup__price" text={props.priceText} />
           <Paragraph
@@ -111,6 +114,8 @@ const CoursePopup = (props) => {
         <div className="course-popup__button-contact-container">
           <Button className="btn-course-contact" text="დაუკავშირდი მენტორს" />
         </div>
+        </div>
+        
       </div>
     </div>
   );

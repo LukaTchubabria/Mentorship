@@ -1,25 +1,16 @@
 ////////// Headings //////////////
 .heading-secondary {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 3.621rem;
+  @include font(3rem, h-b, #000);
 }
 
 .heading-tertiary {
-  font-size: 1.8rem;
-  color: $grey-dark;
-  line-height: 2.16rem;
-  font-weight: 700;
+  @include font(1.8rem, h-b, $grey-dark);
 }
 
 .heading-quaternary {
-  font-size: 2rem;
-  line-height: 1.8rem;
-  font-weight: 500;
+  @include font(2rem, h-m, #000);
 }
 
 .heading-quinary {
-  font-size: 1.7rem;
-  font-weight: 500;
-  line-height: 1.8rem;
+  @include font(1.7rem, h-m, #000);
 }

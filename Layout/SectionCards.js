@@ -134,6 +134,7 @@ const SectionCards = () => {
       mentorImgClassName={popupData.mentorImgClassName}
       isCardClicked={isCardClicked}
       setIsCardClicked={setIsCardClicked}
+      popupType="course"
     />
   ) : null;
 

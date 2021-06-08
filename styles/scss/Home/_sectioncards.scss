@@ -1,17 +1,21 @@
 .section-cards {
   padding: 2rem;
+  @media only screen and (min-width: 820px) {
+    padding-right: 5.1rem;
+    padding-left: 5.1rem;
+  }
 
   &__heading-container {
     margin-bottom: 2rem;
 
     .heading-tertiary {
-      @include font(14px, 'h-b', $grey-light);
+      @include font(14px, "h-b", $grey-light);
     }
   }
 
   &__button-container {
     .btn-seemore {
-      @include font(14px, 'h-b', $grey-dark);
+      @include font(14px, "h-b", $grey-dark);
       background-color: $white-cont;
       padding: 1.4rem 2rem;
     }
@@ -19,5 +23,28 @@
 
   &__cards-container {
     margin-bottom: 3rem;
+    @media only screen and (min-width: 600px) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      row-gap: 3.5rem;
+      column-gap: 2.2rem;
+    }
+
+    & > * {
+      @media only screen and (min-width: 600px) {
+        flex-basis: 47.5%;
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+      @media only screen and (min-width: 820px) {
+        flex-basis: 47.5%;
+      }
+      @media only screen and (min-width: 1200px) {
+        flex-basis: 23%;
+      }
+    }
   }
 }

@@ -4,6 +4,8 @@ import Image from "next/image";
 
 const Card = (props) => {
   const handleCardClick = () => {
+    document.body.classList.add("fixed");
+
     props.setIsCardClicked(!props.isCardClicked);
     const {
       headingText,

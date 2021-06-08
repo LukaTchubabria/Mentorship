@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Icon from "../components/Icon";
-import RegistrationPopup from "../components/RegistrationPopup";
+import CoursePopup from "../components/CoursePopup";
 
 const Header = () => {
   const [userName, setUserName] = useState("");
@@ -29,7 +29,7 @@ const Header = () => {
   };
 
   const renderPopup = isUserClicked ? (
-    <RegistrationPopup
+    <CoursePopup
       user={true}
       userNameValue={userName}
       passwordValue={password}
@@ -38,6 +38,7 @@ const Header = () => {
       onPasswordChange={handlePasswordChange}
       onEmailChange={handleEmailChange}
       onClick={handlePopupBoxClose}
+      popupType="registration"
     />
   ) : null;
   return (

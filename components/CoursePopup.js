@@ -88,18 +88,22 @@ const CoursePopup = (props) => {
       return (
         <div className="course-popup" onClick={handleOnClick}>
           <div className="course-popup__box">
+            <div className="course-popup__header">
             <div className="course-popup__icon-container">
               <Icon icon="close" setIsCardClicked={props.setIsCardClicked} />
             </div>
-            <div className="course-popup__content">
-              <div className="course-popup__text-container">
-                <div className="course-popup__main-heading-container">
+            <div className="course-popup__main-heading-container">
                   <Heading
                     headingTag={props.headingTag}
                     className={props.headingClassName}
                     text={props.headingText}
                   />
                 </div>
+            </div>
+            
+            <div className="course-popup__content">
+              <div className="course-popup__text-container">
+                
 
                 <div className="course-popup__info">
                   <div className="course-popup__secondary-heading-container">
@@ -115,8 +119,8 @@ const CoursePopup = (props) => {
                       className={`course-popup__span-button ${renderCourseInfoButtonClassName}`}
                       onClick={handleCourseInfoClick}
                     >
-                      {props.spanButton}
-                    </span>{" "}
+                      {props.spanMoreButton}
+                    </span>
                     <span
                       className={`course-popup__span-more-text ${renderCourseInfoSpanClassName}`}
                     >
@@ -138,7 +142,7 @@ const CoursePopup = (props) => {
                       className={`course-popup__span-button ${renderCourseLearnWhatButtonClassName}`}
                       onClick={handleCourseLearnWhatClick}
                     >
-                      {props.spanButton}
+                      {props.spanMoreButton}
                     </span>{" "}
                     <span
                       className={`course-popup__span-more-text ${renderCourseLearnWhatSpanClassName}`}
@@ -165,7 +169,7 @@ const CoursePopup = (props) => {
                     text="რეგისტრაცია"
                   />
                 </div>
-                {/* <div className="course-popup__img-container">
+                {props.isDesktop ? <div className="course-popup__img-container">
           <Image
             src={props.mentorImgSrc}
             height={props.mentorImgHeight}
@@ -173,7 +177,8 @@ const CoursePopup = (props) => {
             alt={props.mentorImgAlt}
             className={props.mentorImgClassName}
           />
-        </div> */}
+        </div> : null }
+                
                 <div className="course-popup__button-contact-container">
                   <Button
                     className="btn-course-contact"

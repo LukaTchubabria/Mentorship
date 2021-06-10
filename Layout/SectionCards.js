@@ -45,6 +45,7 @@ const SectionCards = () => {
     courseLearnWhatTextLess: "",
     courseLearnWhatTextMore: "",
     spanMoreButton: "",
+    spanLessButton: "",
   });
 
   useEffect(() => {
@@ -98,6 +99,7 @@ const SectionCards = () => {
         courseLearnWhatTextMore={card.courseLearnWhatTextMore}
         courseLearnWhatHeadingText={card.courseLearnWhatHeadingText}
         spanMoreButton={card.spanMoreButton}
+        spanLessButton={card.spanLessButton}
         meetingText={card.meetingText}
         meetingClassName={card.meetingClassName}
         isCardClicked={isCardClicked}
@@ -122,6 +124,7 @@ const SectionCards = () => {
       courseLearnWhatTextLess={popupData.courseLearnWhatTextLess}
       courseLearnWhatTextMore={popupData.courseLearnWhatTextMore}
       spanMoreButton={popupData.spanMoreButton}
+      spanLessButton={popupData.spanLessButton}
       courseLearnWhatHeadingText={popupData.courseLearnWhatHeadingText}
       priceClassName={popupData.priceClassName}
       priceText={popupData.priceText}

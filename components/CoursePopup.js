@@ -16,6 +16,12 @@ const CoursePopup = (props) => {
       document.body.classList.remove("fixed");
     }
   };
+  const handleCourseInfoClick = () => {
+    setCourseInfoSpanIsOpen(!courseInfoSpanIsOpen);
+  };
+  const handleCourseLearnWhatClick = () => {
+    setCourseLearnWhatSpanIsOpen(!courseLearnWhatSpanIsOpen);
+  };
 
   const renderCourseInfoSpanClassName = courseInfoSpanIsOpen ? "span-open" : "";
   const renderCourseInfoButtonClassName = courseInfoSpanIsOpen
@@ -27,13 +33,19 @@ const CoursePopup = (props) => {
   const renderCourseLearnWhatButtonClassName = courseLearnWhatSpanIsOpen
     ? "span-button-close"
     : "";
-
-  const handleCourseInfoClick = () => {
-    setCourseInfoSpanIsOpen(!courseInfoSpanIsOpen);
-  };
-  const handleCourseLearnWhatClick = () => {
-    setCourseLearnWhatSpanIsOpen(!courseLearnWhatSpanIsOpen);
-  };
+  const renderCourseInfoLessButton = courseInfoSpanIsOpen ? (
+    <span className="course-popup__span-less" onClick={handleCourseInfoClick}>
+      {props.spanLessButton}
+    </span>
+  ) : null;
+  const renderCourseLearnWhatLessButton = courseLearnWhatSpanIsOpen ? (
+    <span
+      className="course-popup__span-less"
+      onClick={handleCourseLearnWhatClick}
+    >
+      {props.spanLessButton}
+    </span>
+  ) : null;
 
   const renderPopup = () => {
     if (props.popupType === "registration") {
@@ -89,22 +101,20 @@ const CoursePopup = (props) => {
         <div className="course-popup" onClick={handleOnClick}>
           <div className="course-popup__box">
             <div className="course-popup__header">
-            <div className="course-popup__icon-container">
-              <Icon icon="close" setIsCardClicked={props.setIsCardClicked} />
+              <div className="course-popup__icon-container">
+                <Icon icon="close" setIsCardClicked={props.setIsCardClicked} />
+              </div>
+              <div className="course-popup__main-heading-container">
+                <Heading
+                  headingTag={props.headingTag}
+                  className={props.headingClassName}
+                  text={props.headingText}
+                />
+              </div>
             </div>
-            <div className="course-popup__main-heading-container">
-                  <Heading
-                    headingTag={props.headingTag}
-                    className={props.headingClassName}
-                    text={props.headingText}
-                  />
-                </div>
-            </div>
-            
+
             <div className="course-popup__content">
               <div className="course-popup__text-container">
-                
-
                 <div className="course-popup__info">
                   <div className="course-popup__secondary-heading-container">
                     <Heading
@@ -125,6 +135,7 @@ const CoursePopup = (props) => {
                       className={`course-popup__span-more-text ${renderCourseInfoSpanClassName}`}
                     >
                       {props.courseInfoTextMore}
+                      {renderCourseInfoLessButton}
                     </span>
                   </p>
                 </div>
@@ -143,11 +154,12 @@ const CoursePopup = (props) => {
                       onClick={handleCourseLearnWhatClick}
                     >
                       {props.spanMoreButton}
-                    </span>{" "}
+                    </span>
                     <span
                       className={`course-popup__span-more-text ${renderCourseLearnWhatSpanClassName}`}
                     >
                       {props.courseLearnWhatTextMore}
+                      {renderCourseLearnWhatLessButton}
                     </span>
                   </p>
                 </div>
@@ -169,20 +181,24 @@ const CoursePopup = (props) => {
                     text="რეგისტრაცია"
                   />
                 </div>
-                {props.isDesktop ? <div className="course-popup__img-container">
-          <Image
-            src={props.mentorImgSrc}
-            height={props.mentorImgHeight}
-            width={props.mentorImgWidth}
-            alt={props.mentorImgAlt}
-            className={props.mentorImgClassName}
-          />
-        </div> : null }
-                
+                {props.isDesktop ? (
+                  <div className="course-popup__img-container">
+                    <Image
+                      src={props.mentorImgSrc}
+                      height={props.mentorImgHeight}
+                      width={props.mentorImgWidth}
+                      alt={props.mentorImgAlt}
+                      className={props.mentorImgClassName}
+                    />
+                  </div>
+                ) : null}
+
                 <div className="course-popup__button-contact-container">
                   <Button
                     className="btn-course-contact"
-                    text="დაუკავშირდი მენტორს"
+                    text={`${
+                      props.isDesktop ? "კონტაქტი" : "დაუკავშირდი მენტორს"
+                    }`}
                   />
                 </div>
               </div>

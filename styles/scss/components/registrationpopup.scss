@@ -9,6 +9,10 @@
   @media only screen and (min-width: 1200px) {
     position: absolute;
     top: 100%;
+    background-color: $white-cont;
+    height: auto;
+    width: calc(164px + 70px);
+    box-shadow: $shadow_1;
   }
   &__box {
     position: absolute;
@@ -22,8 +26,7 @@
     @media only screen and (min-width: 1200px) {
       position: static;
       transform: translate(0);
-      transform: translateX(-50%);
-      width: 267.5px;
+      width: 100%;
     }
   }
 

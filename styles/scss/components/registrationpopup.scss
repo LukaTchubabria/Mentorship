@@ -6,6 +6,10 @@
   left: 0;
   background-color: rgba(37, 82, 172, 0.33);
   z-index: 9999;
+  @media only screen and (min-width: 1200px) {
+    position: absolute;
+    top: 100%;
+  }
   &__box {
     position: absolute;
     top: 0;
@@ -15,6 +19,12 @@
     padding: 3rem;
     width: 80%;
     border-radius: 10px;
+    @media only screen and (min-width: 1200px) {
+      position: static;
+      transform: translate(0);
+      transform: translateX(-50%);
+      width: 267.5px;
+    }
   }
 
   &__form {

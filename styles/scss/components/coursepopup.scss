@@ -27,6 +27,9 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 4rem;
+    & a {
+      cursor: pointer;
+    }
     & svg {
       width: 2rem;
       height: 2rem;
@@ -79,8 +82,8 @@
   }
 
   &__paragraph {
-    @include font(1.4rem, h-l, #000); // This on review
-    line-height: 1.8rem;
+    @include font(1.8rem, h-l, #000); // This on review
+    line-height: 21.72px;
   }
 
   &__secondary-heading-container {
@@ -148,17 +151,99 @@
     }
   }
   &__img-container {
+    text-align: center;
+    margin-bottom: 2rem;
+    & > div {
+      width: 50%;
+    }
+    & img {
+      margin: 0 auto;
+      border-radius: 50%;
+    }
     @media only screen and (min-width: 1200px) {
       grid-column: 1 / 1;
       grid-row: 1 / 1;
-      text-align: center;
+    }
+  }
 
-      & > div {
-        width: 50%;
+  &__registration-form {
+    & > *:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__registration-input {
+    padding: 1.2rem 1.1rem;
+    @include font(14px, "h-r", $grey-dark);
+
+    box-shadow: $shadow_1;
+    border-radius: 1rem;
+    &:focus::placeholder {
+      color: transparent;
+    }
+    &::placeholder {
+      color: $grey-dark;
+    }
+    &--time {
+      width: 100%;
+      & option:not(:first-child) {
+        color: #000;
       }
-      & img {
-        border-radius: 50%;
+    }
+    &--textarea {
+      width: 100%;
+
+      &::placeholder {
+        text-align: left;
       }
+    }
+  }
+
+  &__radio {
+    display: block;
+    position: relative;
+    padding-left: 22px;
+    cursor: pointer;
+    @include font(14px, "h-r", $grey-dark);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    & input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      &:checked ~ .course-popup__checkmark {
+        background-color: #fff;
+      }
+      &:checked ~ .course-popup__checkmark::after {
+        display: block;
+      }
+    }
+  }
+  &__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid $blue-cyan;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 3px;
+      left: 3px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $blue-cyan;
     }
   }
 }

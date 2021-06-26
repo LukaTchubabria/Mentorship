@@ -4,6 +4,8 @@ import Image from "next/image";
 
 const Card = (props) => {
   const handleCardClick = () => {
+    document.body.classList.add("fixed");
+
     props.setIsCardClicked(!props.isCardClicked);
     const {
       headingText,
@@ -12,8 +14,12 @@ const Card = (props) => {
       aboutCourseHeadingTag,
       aboutCourseHeadingText,
       aboutCourseHeadingClassName,
-      courseInfoText,
-      courseLearnWhatText,
+      courseInfoTextLess,
+      courseInfoTextMore,
+      courseLearnWhatTextLess,
+      courseLearnWhatTextMore,
+      spanMoreButton,
+      spanLessButton,
       courseLearnWhatHeadingText,
       meetingText,
       meetingClassName,
@@ -33,8 +39,12 @@ const Card = (props) => {
       aboutCourseHeadingTag,
       aboutCourseHeadingText,
       aboutCourseHeadingClassName,
-      courseInfoText,
-      courseLearnWhatText,
+      courseInfoTextLess,
+      courseInfoTextMore,
+      courseLearnWhatTextLess,
+      courseLearnWhatTextMore,
+      spanMoreButton,
+      spanLessButton,
       courseLearnWhatHeadingText,
       meetingText,
       meetingClassName,
@@ -71,8 +81,8 @@ const Card = (props) => {
               text={props.mentorParagraphText}
             />
             <Paragraph
-              className={`card__${props.priceParagraphClassName}`}
-              text={props.priceParagraphText}
+              className={`card__${props.priceClassName}`}
+              text={props.priceText}
             />
           </div>
           <div className="card__mentor-img-container">

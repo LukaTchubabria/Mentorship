@@ -1,12 +1,19 @@
 import { useState } from "react";
 import Icon from "../components/Icon";
-import RegistrationPopup from "../components/RegistrationPopup";
+import CoursePopup from "../components/CoursePopup";
+import Button from "../components/Button";
 
-const Header = () => {
+const Header = (props) => {
   const [userName, setUserName] = useState("");
   const [password, setUserPassword] = useState("");
   const [email, setEmail] = useState("");
   const [isUserClicked, setIsUserClicked] = useState(false);
+
+  const renderRegistrationButton = props.isDesktop ? (
+    <div className="header__registration-button-container">
+      <Button className="btn-primary" text="რეგისტრაცია" />
+    </div>
+  ) : null;
 
   const handleUserNameChange = (e) => {
     setUserName(e.target.value);
@@ -29,7 +36,7 @@ const Header = () => {
   };
 
   const renderPopup = isUserClicked ? (
-    <RegistrationPopup
+    <CoursePopup
       user={true}
       userNameValue={userName}
       passwordValue={password}
@@ -38,18 +45,25 @@ const Header = () => {
       onPasswordChange={handlePasswordChange}
       onEmailChange={handleEmailChange}
       onClick={handlePopupBoxClose}
+      popupType="registration"
+      isDesktop={props.isDesktop}
     />
   ) : null;
   return (
     <header className="header">
-      <div className="header__social-media">
+      <div className="header__user-panel">
         <div className="header__icon-container">
           <Icon icon="search" />
         </div>
-        <div className="header__icon-container">
+        <div
+          className={`header__icon-container ${
+            isUserClicked ? "user-button-active" : ""
+          }`}
+        >
           <Icon icon="user" onUserClick={handleUserClick} />
           {renderPopup}
         </div>
+        {renderRegistrationButton}
       </div>
     </header>
   );

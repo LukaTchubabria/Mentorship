@@ -3,9 +3,11 @@ import Card from "../components/Card";
 import Button from "../components/Button";
 import CoursePopup from "../components/CoursePopup";
 import { courseData } from "../data/courseData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const SectionCards = () => {
+const SectionCards = (props) => {
+  const [cardNumber, setCardNumber] = useState(4);
+
   const [isCardClicked, setIsCardClicked] = useState(false);
   const [popupData, setPopupData] = useState({
     courseImgSrc: "",
@@ -18,8 +20,8 @@ const SectionCards = () => {
     headingText: "",
     mentorParagraphClassName: "",
     mentorParagraphText: "",
-    pricehClassName: "",
-    pricehText: "",
+    priceClassName: "",
+    priceText: "",
     mentorImgSrc: "",
     mentorImgHeight: "",
     mentorImgWidth: "",
@@ -28,11 +30,36 @@ const SectionCards = () => {
     aboutCourseHeadingTag: "h4",
     aboutCourseHeadingText: "",
     aboutCourseHeadingClassName: "",
-    courseInfoText: "",
-    courseLearnWhatText: "",
+    courseInfoTextLess: "",
+    courseInfoTextMore: "",
+    courseLearnWhatTextLess: "",
+    courseLearnWhatTextMore: "",
+    spanMoreButton: "",
+    spanLessButton: "",
   });
 
-  const renderCards = courseData.map((card, index) => {
+  useEffect(() => {
+    if (props.isMobile) {
+      setCardNumber(4);
+    }
+    if (props.isTablet) {
+      setCardNumber(6);
+    }
+    if (props.isDesktop) {
+      setCardNumber(16);
+    }
+  }, [props.isMobile, props.isTablet, props.isDesktop]);
+
+  const handleCourseDataSplice = (itemCount) => {
+    const courseDataSplicedArr = courseData.slice(0, itemCount);
+    return courseDataSplicedArr;
+  };
+
+  const handleOnClick = () => {
+    setCardNumber(cardNumber + 4);
+  };
+
+  const renderCards = handleCourseDataSplice(cardNumber).map((card, index) => {
     return (
       <Card
         courseImgSrc={card.courseImgSrc}
@@ -56,9 +83,13 @@ const SectionCards = () => {
         mentorImgAlt={card.mentorImgAlt}
         mentorImgClassName={card.mentorImgClassName}
         meetingQuantity={card.meetingQuantity}
-        courseInfoText={card.courseInfoText}
-        courseLearnWhatText={card.courseLearnWhatText}
+        courseInfoTextLess={card.courseInfoTextLess}
+        courseInfoTextMore={card.courseInfoTextMore}
+        courseLearnWhatTextLess={card.courseLearnWhatTextLess}
+        courseLearnWhatTextMore={card.courseLearnWhatTextMore}
         courseLearnWhatHeadingText={card.courseLearnWhatHeadingText}
+        spanMoreButton={card.spanMoreButton}
+        spanLessButton={card.spanLessButton}
         meetingText={card.meetingText}
         meetingClassName={card.meetingClassName}
         isCardClicked={isCardClicked}
@@ -78,8 +109,12 @@ const SectionCards = () => {
       aboutCourseHeadingClassName={popupData.aboutCourseHeadingClassName}
       aboutCourseHeadingTag={popupData.aboutCourseHeadingTag}
       aboutCourseHeadingText={popupData.aboutCourseHeadingText}
-      courseInfoText={popupData.courseInfoText}
-      courseLearnWhatText={popupData.courseLearnWhatText}
+      courseInfoTextLess={popupData.courseInfoTextLess}
+      courseInfoTextMore={popupData.courseInfoTextMore}
+      courseLearnWhatTextLess={popupData.courseLearnWhatTextLess}
+      courseLearnWhatTextMore={popupData.courseLearnWhatTextMore}
+      spanMoreButton={popupData.spanMoreButton}
+      spanLessButton={popupData.spanLessButton}
       courseLearnWhatHeadingText={popupData.courseLearnWhatHeadingText}
       priceClassName={popupData.priceClassName}
       priceText={popupData.priceText}
@@ -90,9 +125,13 @@ const SectionCards = () => {
       mentorImgWidth={popupData.mentorImgWidth}
       mentorImgAlt={popupData.mentorImgAlt}
       mentorImgClassName={popupData.mentorImgClassName}
+      isCardClicked={isCardClicked}
       setIsCardClicked={setIsCardClicked}
+      popupType="course"
+      isDesktop={props.isDesktop}
     />
   ) : null;
+
   return (
     <section className="section-cards">
       <div className="section-cards__heading-container">
@@ -104,7 +143,11 @@ const SectionCards = () => {
       </div>
       <div className="section-cards__cards-container">{renderCards}</div>
       <div className="section-cards__button-container">
-        <Button className="btn-seemore" text="ნახეთ მეტი" />
+        <Button
+          className="btn-seemore"
+          text="ნახეთ მეტი"
+          onClick={handleOnClick}
+        />
       </div>
       {renderCoursePopup}
     </section>

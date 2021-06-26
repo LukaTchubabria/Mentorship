@@ -14,37 +14,62 @@
   }
 
   &__form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1.5rem;
-    justify-content: center;
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // grid-gap: 1.5rem;
+    // justify-content: center;
+
+    position: relative;
     @media only screen and (min-width: 820px) {
       grid-template-columns: 3fr 2fr 1fr 2fr;
-      grid-gap: 2rem;
+
+      display: flex;
     }
     @media only screen and (min-width: 1200px) {
-      grid-template-columns: 4fr 3fr 2fr 1fr;
-      grid-gap: 0;
+      // grid-template-columns: 4fr 3fr 2fr 1fr;
+      // grid-gap: 0;
+      // box-shadow: $shadow_1;
+      justify-content: space-between;
+    }
+  }
+
+  &__input-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media only screen and (min-width: 820px) {
+      flex-basis: 75%;
+    }
+    @media only screen and (min-width: 1200px) {
       box-shadow: $shadow_1;
-      & input:not(.section-search__input-field--price) {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
+      flex-basis: 74%;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    & > *:not(:last-child) {
+      margin-bottom: 2rem;
+      @media only screen and (min-width: 820px) {
+        margin-bottom: 0;
+        margin-right: 1rem;
       }
-      & input:not(.section-search__input-field--name) {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+      @media only screen and (min-width: 1200px) {
+        margin-right: 0;
       }
     }
   }
 
   &__input-field {
     &--name {
-      grid-column: 1 / -1;
+      // grid-column: 1 / -1;
+      flex-basis: 100%;
       @media only screen and (min-width: 820px) {
-        grid-column: 1 / 1;
+        flex-basis: 43%;
       }
       @media only screen and (min-width: 1200px) {
         position: relative;
+        flex-basis: 45%;
+
         &::after {
           content: "";
           position: absolute;
@@ -58,12 +83,14 @@
       }
     }
     &--location {
-      grid-column: 1 / -1;
+      flex-basis: 100%;
+      // grid-column: 1 / -1;
       @media only screen and (min-width: 820px) {
-        grid-column: 2 / 2;
+        flex-basis: 38%;
       }
       @media only screen and (min-width: 1200px) {
         position: relative;
+        flex-basis: 40%;
         &::after {
           content: "";
           position: absolute;
@@ -75,6 +102,28 @@
           background-color: rgba(216, 216, 216, 1);
         }
       }
+    }
+    &--price {
+      flex-basis: 47%;
+      @media only screen and (min-width: 820px) {
+        flex-basis: 13%;
+      }
+      @media only screen and (min-width: 1200px) {
+        flex-basis: 15%;
+      }
+    }
+  }
+  &__button-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 47%;
+    @media only screen and (min-width: 820px) {
+      position: static;
+      width: 25%;
+    }
+    @media only screen and (min-width: 1200px) {
+      width: 24%;
     }
   }
   &__input {
@@ -93,6 +142,7 @@
     }
     @media only screen and (min-width: 1200px) {
       box-shadow: none;
+      border-radius: 0;
     }
   }
 }

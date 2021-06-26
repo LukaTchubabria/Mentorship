@@ -4,19 +4,9 @@ import Button from "../components/Button";
 import CoursePopup from "../components/CoursePopup";
 import { courseData } from "../data/courseData";
 import { useEffect, useState } from "react";
-import { useMediaQuery } from "react-responsive";
 
-const SectionCards = () => {
+const SectionCards = (props) => {
   const [cardNumber, setCardNumber] = useState(4);
-  const isMobile = useMediaQuery({
-    query: "(max-width: 599px)",
-  });
-  const isTablet = useMediaQuery({
-    query: "(min-device-width: 600px)",
-  });
-  const isDesktop = useMediaQuery({
-    query: "(min-device-width: 1200px)",
-  });
 
   const [isCardClicked, setIsCardClicked] = useState(false);
   const [popupData, setPopupData] = useState({
@@ -44,20 +34,21 @@ const SectionCards = () => {
     courseInfoTextMore: "",
     courseLearnWhatTextLess: "",
     courseLearnWhatTextMore: "",
-    spanButton: "",
+    spanMoreButton: "",
+    spanLessButton: "",
   });
 
   useEffect(() => {
-    if (isMobile) {
+    if (props.isMobile) {
       setCardNumber(4);
     }
-    if (isTablet) {
+    if (props.isTablet) {
       setCardNumber(6);
     }
-    if (isDesktop) {
+    if (props.isDesktop) {
       setCardNumber(16);
     }
-  }, [isMobile, isTablet, isDesktop]);
+  }, [props.isMobile, props.isTablet, props.isDesktop]);
 
   const handleCourseDataSplice = (itemCount) => {
     const courseDataSplicedArr = courseData.slice(0, itemCount);
@@ -97,7 +88,8 @@ const SectionCards = () => {
         courseLearnWhatTextLess={card.courseLearnWhatTextLess}
         courseLearnWhatTextMore={card.courseLearnWhatTextMore}
         courseLearnWhatHeadingText={card.courseLearnWhatHeadingText}
-        spanButton={card.spanButton}
+        spanMoreButton={card.spanMoreButton}
+        spanLessButton={card.spanLessButton}
         meetingText={card.meetingText}
         meetingClassName={card.meetingClassName}
         isCardClicked={isCardClicked}
@@ -121,7 +113,8 @@ const SectionCards = () => {
       courseInfoTextMore={popupData.courseInfoTextMore}
       courseLearnWhatTextLess={popupData.courseLearnWhatTextLess}
       courseLearnWhatTextMore={popupData.courseLearnWhatTextMore}
-      spanButton={popupData.spanButton}
+      spanMoreButton={popupData.spanMoreButton}
+      spanLessButton={popupData.spanLessButton}
       courseLearnWhatHeadingText={popupData.courseLearnWhatHeadingText}
       priceClassName={popupData.priceClassName}
       priceText={popupData.priceText}
@@ -135,6 +128,7 @@ const SectionCards = () => {
       isCardClicked={isCardClicked}
       setIsCardClicked={setIsCardClicked}
       popupType="course"
+      isDesktop={props.isDesktop}
     />
   ) : null;
 

@@ -30,40 +30,43 @@ const SectionSearch = () => {
         />
       </div>
       <form action="#" className="section-search__form">
-        <div className="section-search__input-field section-search__input-field--name">
-          <Input
-            name="course-name"
-            id="course-name"
-            placeholder="კურსის დასახელება"
-            type="text"
-            className="section-search__input section-search__input--name"
-            value={courseName}
-            onChange={handleNameChange}
-          />
+        <div className="section-search__input-container">
+          <div className="section-search__input-field section-search__input-field--name">
+            <Input
+              name="course-name"
+              id="course-name"
+              placeholder="კურსის დასახელება"
+              type="text"
+              className="section-search__input section-search__input--name"
+              value={courseName}
+              onChange={handleNameChange}
+            />
+          </div>
+          <div className="section-search__input-field section-search__input-field--location">
+            <Input
+              name="course-location"
+              id="course-location"
+              placeholder="ადგილმდებარეობა"
+              type="text"
+              className="section-search__input section-search__input--location"
+              value={courseLocation}
+              onChange={handleLocationChange}
+            />
+          </div>
+          <div className="section-search__input-field section-search__input-field--price">
+            <Input
+              name="course-price"
+              id="course-price"
+              placeholder="ფასი"
+              type="number"
+              className="section-search__input section-search__input--price"
+              value={coursePrice}
+              onChange={handlePriceChange}
+            />
+          </div>
         </div>
-        <div className="section-search__input-field section-search__input-field--location">
-          <Input
-            name="course-location"
-            id="course-location"
-            placeholder="ადგილმდებარეობა"
-            type="text"
-            className="section-search__input section-search__input--location"
-            value={courseLocation}
-            onChange={handleLocationChange}
-          />
-        </div>
-        <div className="section-search__input-field section-search__input-field--price">
-          <Input
-            name="course-price"
-            id="course-price"
-            placeholder="ფასი"
-            type="number"
-            className="section-search__input section-search__input--price"
-            value={coursePrice}
-            onChange={handlePriceChange}
-          />
-        </div>
-        <div className="section-search__input-field section-search__input-field--button">
+
+        <div className="section-search__button-container">
           <Button text="ძიება" className="btn-primary" />
         </div>
       </form>

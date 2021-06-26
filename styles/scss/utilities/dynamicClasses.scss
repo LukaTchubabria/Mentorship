@@ -11,3 +11,23 @@
 .fixed {
   overflow: hidden;
 }
+
+.user-button-active {
+  background-color: $white-cont;
+  box-shadow: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+
+  &::after {
+    content: " ";
+    border: 0;
+    position: absolute;
+    right: -20px;
+    bottom: 0px;
+    width: 20px;
+    height: 100%;
+    border-radius: 0 0 0 20px;
+    background: #fff;
+  }
+}

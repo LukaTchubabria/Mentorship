@@ -1,34 +1,98 @@
 .section-choice {
+  display: flex;
+  align-items: center;
+}
+
+.section-choice-cont {
   padding: 11.3rem 3.4rem 10rem 3.4rem;
-  @include main-font(36px, 'h-h');
+
+  @media only screen and (min-width: 625px) {
+    display: flex;
+    padding: 20rem 3.4rem 15rem 3.4rem;
+  }
+  @media only screen and (min-width: 900px) {
+    display: block;
+  }
+
+
+  .heading-first {
+    @include main-font(36px, 'h-h');
+    line-height: 43px;
+    @media only screen and (min-width: 625px) {
+      margin-right: 2rem;
+    }
+    @media only screen and (min-width: 900px) {
+      @include main-font(45px, 'h-h');
+      line-height: 54px;
+    }
+  }
 
   &__heading-container {
     width: 100%;
   }
+
   &__btn-cont {
     margin-top: 2.9rem;
-    text-align: center;
+    @media only screen and (min-width: 900px) {
+      margin-top: 7.7rem;
+    }
 
     .btn-learn {
-      @include btn(
-        16.4rem,
+      display: block;
+      margin: 0 auto;
+      @include btn(16.4rem,
         3.4rem,
         white,
         14px,
         'h-b',
-        $blue-cyan
-      );
+        $blue-cyan);
+      @media only screen and (min-width: 625px) {
+        margin: 0 0;
+      }
+      @media only screen and (min-width: 1000px) {
+        display: inline-block;
+        @include btn(19.7rem,
+        5.6rem,
+        rgba(255, 255, 255, 0.94),
+        18px,
+        'h-b',
+        $grey-dark);
+      }
     }
+
     .btn-teach {
-      margin-top: 2rem;
-      @include btn(
-        16.4rem,
+      display: block;
+      margin: 2rem auto 0 auto;
+      @include btn(16.4rem,
         3.4rem,
         rgba(255, 255, 255, 0.94),
         14px,
         'h-b',
-        $grey-dark
-      );
+        $grey-dark);
+      @media only screen and (min-width: 625px) {
+        margin: 2rem 0 0 0;
+      }
+      @media only screen and (min-width: 1000px) {
+        margin: 0 0 0 2.9rem;
+        display: inline-block;
+        @include btn(19.7rem,
+        5.6rem,
+        white,
+        18px,
+        'h-b',
+        $blue-cyan);
+      }
     }
+  }
+}
+
+#section-img {
+  padding: 17rem 3.4rem 10rem 0;
+  display: none;
+  @media only screen and (min-width: 900px) {
+    display: block;
+  }
+  @media only screen and (min-width: 900px) {
+    width: 50%;
   }
 }

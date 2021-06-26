@@ -10,6 +10,7 @@
 
     .heading-secondary {
       @include main-font(30px, "h-b");
+      line-height: 36px;
     }
   }
 

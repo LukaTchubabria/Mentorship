@@ -1,0 +1,37 @@
+.btn {
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  box-shadow: $shadow_1;
+  border-radius: 1rem;
+}
+
+.btn-primary {
+  @include font(14px, "h-b", $white-font);
+  background-color: $blue-dark;
+  padding: 0.85rem 2rem;
+}
+
+.btn-secondary {
+  @include font(14px, "h-b", $grey-dark);
+  background-color: $white-cont;
+  padding: 1.4rem 2rem;
+}
+
+.btn-course-registration,
+.btn-course-contact {
+  border-radius: 1rem;
+  padding: 1.4rem 2rem;
+}
+
+.btn-course-registration {
+  background-color: $blue-cyan;
+  color: #fff;
+  font-size: 1.7rem;
+}
+.btn-course-contact {
+  font-size: 1.2rem;
+  color: $blue-cyan;
+  @include font(1.2rem, "h-b", $blue-cyan);
+  background-color: #fff;
+}

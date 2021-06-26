@@ -1,0 +1,45 @@
+.card {
+  background-color: $white-cont;
+  padding: 2.5rem;
+  box-shadow: $shadow_2;
+  border-radius: 1rem;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__img-container {
+    margin-bottom: 1rem;
+
+    & > div {
+      width: 100%;
+    }
+  }
+
+  &__course-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text-container {
+    & > *:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__mentor-name {
+    @include font(18px, 'h-m', #000);
+    line-height: 1.8rem;
+  }
+
+  &__course-price {
+    @include font(30px, 'h-m', $blue-light);
+    line-height: 1.8rem;
+  }
+
+  &__mentor-img-container {
+    & img {
+      border-radius: 50%;
+    }
+  }
+}

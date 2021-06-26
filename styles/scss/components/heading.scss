@@ -1,0 +1,16 @@
+////////// Headings //////////////
+.heading-secondary {
+  @include font(3rem, h-b, #000);
+}
+
+.heading-tertiary {
+  @include font(1.8rem, h-b, $grey-dark);
+}
+
+.heading-quaternary {
+  @include font(2rem, h-m, #000);
+}
+
+.heading-quinary {
+  @include font(1.7rem, h-m, #000);
+}

@@ -1,0 +1,33 @@
+.footer {
+  display: flex;
+  padding: 1rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $white-cont;
+  @media only screen and (min-width: 820px) {
+    padding-left: 5.1rem;
+    padding-right: 5.1rem;
+  }
+
+  &__copyright-text {
+    @include font(18px, "h-l", $grey-dark);
+  }
+
+  &__social-media {
+    display: flex;
+
+    & > *:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__icon-container {
+    width: 5rem;
+    height: 5rem;
+    background-color: $bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+  }
+}

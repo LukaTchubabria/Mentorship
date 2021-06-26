@@ -6,6 +6,12 @@
   z-index: 1;
   @include flex($justify: space-between, $direct: row-reverse);
 
+  .header__search {
+    @media only screen and (min-width: 1200px) {
+      display: none;
+    }
+  }
+
   &__user-panel {
     display: flex;
 

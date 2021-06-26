@@ -52,7 +52,7 @@ const Header = (props) => {
   return (
     <header className="header">
       <div className="header__user-panel">
-        <div className="header__icon-container">
+        <div className="header__icon-container header__search">
           <Icon icon="search" />
         </div>
         <div

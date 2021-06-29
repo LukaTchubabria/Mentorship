@@ -81,3 +81,23 @@
   height: $h;
   object-fit: $o-fit;
 }
+
+// @media mixins
+
+@mixin md($media){
+  @if $media == desktop {
+    @media (min-width: 1246px){
+      @content;
+    }
+  }
+  @else if $media == tablet {
+    @media (min-width: 700px){
+      @content;
+    }
+  }
+  @else if $media {
+    @media ($media){
+      @content;
+    }
+  }
+}

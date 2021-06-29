@@ -4,25 +4,26 @@
 }
 
 .section-choice-cont {
-  padding: 11.3rem 3.4rem 10rem 3.4rem;
+  margin: 11.3rem 0 10rem 0;
 
-  @media only screen and (min-width: 625px) {
+  @include md(tablet) {
     display: flex;
-    padding: 20rem 3.4rem 15rem 3.4rem;
+    margin: 20rem 0 15rem 0;
   }
-  @media only screen and (min-width: 900px) {
+  @include md(desktop) {
     display: block;
+    margin: 20rem 0 15rem 0;
   }
 
 
   .heading-first {
     @include main-font(36px, 'h-h');
     line-height: 43px;
-    @media only screen and (min-width: 625px) {
+    @include md(tablet) {
       margin-right: 2rem;
     }
-    @media only screen and (min-width: 900px) {
-      @include main-font(45px, 'h-h');
+    @include md(desktop) {
+      @include main-font(45px, 'h-b');
       line-height: 54px;
     }
   }
@@ -33,7 +34,7 @@
 
   &__btn-cont {
     margin-top: 2.9rem;
-    @media only screen and (min-width: 900px) {
+    @include md(desktop) {
       margin-top: 7.7rem;
     }
 
@@ -46,10 +47,10 @@
         14px,
         'h-b',
         $blue-cyan);
-      @media only screen and (min-width: 625px) {
+      @include md(tablet) {
         margin: 0 0;
       }
-      @media only screen and (min-width: 1000px) {
+      @include md(desktop) {
         display: inline-block;
         @include btn(19.7rem,
         5.6rem,
@@ -69,10 +70,10 @@
         14px,
         'h-b',
         $grey-dark);
-      @media only screen and (min-width: 625px) {
+      @include md(tablet) {
         margin: 2rem 0 0 0;
       }
-      @media only screen and (min-width: 1000px) {
+      @include md(desktop) {
         margin: 0 0 0 2.9rem;
         display: inline-block;
         @include btn(19.7rem,
@@ -87,12 +88,12 @@
 }
 
 #section-img {
-  padding: 17rem 3.4rem 10rem 0;
+  padding: 17rem 10rem 10rem 0;
   display: none;
-  @media only screen and (min-width: 900px) {
+  @include md(desktop) {
     display: block;
   }
-  @media only screen and (min-width: 900px) {
+  @include md(desktop) {
     width: 50%;
   }
 }

@@ -11,3 +11,13 @@ input {
   border: none;
   outline: none;
 }
+.section-choice-cont, .section-cards, .section-search{
+  padding: 0 3.5rem;
+
+  @include md(tablet) {
+    padding: 0 5.1rem;
+  }
+  @include md(desktop) {
+    padding: 0 10rem;
+  }
+}

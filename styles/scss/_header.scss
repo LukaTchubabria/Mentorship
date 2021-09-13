@@ -6,6 +6,12 @@
   z-index: 1;
   @include flex($justify: space-between, $direct: row-reverse);
 
+  .header__search {
+    @include md(desktop) {
+      display: none;
+    }
+  }
+
   &__user-panel {
     display: flex;
 
@@ -23,7 +29,7 @@
     background-color: $bg;
     @include flex;
     border-radius: 1rem;
-    @media only screen and (min-width: 1200px) {
+    @include md(desktop) {
       position: relative;
     }
     & > a {

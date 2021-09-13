@@ -67,7 +67,7 @@ const SectionSearch = () => {
         </div>
 
         <div className="section-search__button-container">
-          <Button text="ძიება" className="btn-primary" />
+          <Button text="ძიება" className="btn-primary search__btn" />
         </div>
       </form>
     </section>
